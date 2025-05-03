@@ -6,7 +6,7 @@ int	main()
 	char				pruebastr[] = "abcde";
 	int					prueba_hex = -255;
 	int					*str = &prueba_hex;
-	unsigned int		prueba_un = 30;
+	unsigned int		prueba_un = -30;
 	unsigned int		prueba_un1 = 50;
 	int					chars_count;
 
@@ -22,17 +22,17 @@ int	main()
 	ft_printf("%% \n");
 	printf("%i\n", 6);
 	ft_printf("%i\n", 6);
-	printf("%i\n", 8);
-	ft_printf("%i\n", 8);
+	printf("%d\n", 8);
+	ft_printf("%d\n", 8);
 	printf("%x\n", prueba_hex);
 	ft_printf("%x\n", prueba_hex);
 	printf("%X\n", prueba_hex);
 	ft_printf("%X\n", prueba_hex);
 	printf("%p\n", &str);
 	ft_printf("%p\n", &str);
-	chars_count = printf("%s, %d, %x, %p\n", pruebastr, prueba_hex, prueba_hex, &prueba_hex);
+	chars_count = printf("%s, %d, %x, %p\n", pruebastr, prueba_hex, prueba_hex, &str);
 	printf("Total caracteres %d\n", chars_count);
-	chars_count = ft_printf("%s, %d, %x, %p\n", pruebastr, prueba_hex, prueba_hex, &prueba_hex);
+	chars_count = ft_printf("%s, %d, %x, %p\n", pruebastr, prueba_hex, prueba_hex, &str);
 	ft_printf("Total caracteres  %d\n", chars_count);
 	return (0);
 }
