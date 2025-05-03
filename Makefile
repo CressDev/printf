@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amonteag <amonteag@student.42.fr>          +#+  +:+       +#+         #
+#    By: cress <cress@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/23 18:21:37 by amonteag          #+#    #+#              #
-#    Updated: 2025/04/24 21:17:21 by amonteag         ###   ########.fr        #
+#    Updated: 2025/05/03 12:20:31 by cress            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM = rm -f
 LIBFT_DIR = ./libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRC = ft_printf.c
+SRC = ft_printf.c ft_printf_functions.c
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

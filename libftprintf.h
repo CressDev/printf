@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amonteag <amonteag@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cress <cress@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 18:26:50 by amonteag          #+#    #+#             */
-/*   Updated: 2025/04/24 20:49:45 by amonteag         ###   ########.fr       */
+/*   Updated: 2025/05/03 20:34:58 by cress            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int ft_printf(char const *, ...);
+int     ft_printf(char const *, ...);
+int	ft_putnbr_hex_fd(unsigned int n, int fd);
+int	ft_putnbr_HEX_fd(unsigned int n, int fd);
+int	ft_putunsig_fd(unsigned int n, int fd);
+int	ft_putptr_fd(void *ptr, int fd);
+int	ft_putptr_hex_fd(unsigned long n, int fd);
 
 #endif
