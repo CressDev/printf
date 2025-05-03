@@ -6,7 +6,7 @@
 /*   By: cress <cress@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 12:04:13 by cress             #+#    #+#             */
-/*   Updated: 2025/05/03 23:58:04 by cress            ###   ########.fr       */
+/*   Updated: 2025/05/04 00:07:49 by cress            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,6 @@ int	ft_putnbr_hex_fd(unsigned int n, int fd)
 	alf_hex = "0123456789abcdef";
 	if (n >= 16)
 		chars_count += ft_putnbr_hex_fd(n / 16, fd);
-	chars_count += ft_putchar_fd(alf_hex[n % 16], 1);
-	return (chars_count);
-}
-
-int	ft_putptr_hex_fd(unsigned long n, int fd)
-{
-	char	*alf_hex;
-	int		chars_count;
-
-	chars_count = 0;
-	alf_hex = "0123456789abcdef";
-	if (n >= 16)
-		chars_count += ft_putptr_hex_fd(n / 16, fd);
 	chars_count += ft_putchar_fd(alf_hex[n % 16], 1);
 	return (chars_count);
 }
@@ -64,6 +51,19 @@ int	ft_putunsig_fd(unsigned int n, int fd)
 		chars_count += ft_putunsig_fd(n / 10, fd);
 	digit = (n % 10) + '0';
 	chars_count += write(fd, &digit, 1);
+	return (chars_count);
+}
+
+int	ft_putptr_hex_fd(unsigned long n, int fd)
+{
+	char	*alf_hex;
+	int		chars_count;
+
+	chars_count = 0;
+	alf_hex = "0123456789abcdef";
+	if (n >= 16)
+		chars_count += ft_putptr_hex_fd(n / 16, fd);
+	chars_count += ft_putchar_fd(alf_hex[n % 16], 1);
 	return (chars_count);
 }
 
